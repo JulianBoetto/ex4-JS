@@ -4,7 +4,7 @@ let idades = document.querySelector("#idade");
 let form = document.querySelector("form");
 let btnExibirMaisVelhos = document.querySelector("#exibirMaisVelhos");
 let resultado = document.querySelector("#resultado")
-
+let pessoasAdi = document.querySelector("#pessoasAdi")
 
 let pessoas = [];
 
@@ -26,7 +26,7 @@ form.addEventListener("submit", function (event) {
   
   //Cria a lista com o nome completo das pessoas
   
-  resultado.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade}`;
+  pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade}`;
 });
 
 
