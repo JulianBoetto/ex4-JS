@@ -26,8 +26,7 @@ form.addEventListener("submit", function (event) {
   
     //Mostra o nome completo das pessoas
     pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade}`;
-    
-    
+        
 });
 
 
@@ -35,60 +34,29 @@ form.addEventListener("submit", function (event) {
 btnExibirMaisVelhos.addEventListener("click", function exibirMaisVelhos() {
     let lista = document.createElement("ul");
   
-    for (let pessoaMaisVelha of pessoasMaisVelhas(pessoas)) {
-      let item = document.createElement("li");
-      item.textContent = `${pessoaMaisVelha.nome} com ${pessoaMaisVelha.idade} anos`;
-      lista.appendChild(item);
-    }
+        for (let pessoaMaisVelha of pessoasMaisVelhas(pessoas)) {
+        let item = document.createElement("li");
+        item.textContent = `${pessoaMaisVelha.nome} com ${pessoaMaisVelha.idade} anos`;
+        lista.appendChild(item);
+        }
   
     resultado.innerHTML = "";
     resultado.appendChild(lista);
-  });
+    });
   
-  function pessoasMaisVelhas(pessoas) {
+    function pessoasMaisVelhas(pessoas) {
     let maisVelhasAtuais = [pessoas[0]];
   
-    for (let pessoa of pessoas.slice(1)) {
-      if (maisVelhasAtuais[0].idade < pessoa.idade) {
-        maisVelhasAtuais = [pessoa];
-      } else if (maisVelhasAtuais[0].idade === pessoa.idade) {
-        maisVelhasAtuais.push(pessoa);
-      }
-    }
+        for (let pessoa of pessoas.slice(1)) {
+            if (maisVelhasAtuais[0].idade < pessoa.idade) {
+                maisVelhasAtuais = [pessoa];
+            } 
+            
+            else if (maisVelhasAtuais[0].idade === pessoa.idade) {
+                maisVelhasAtuais.push(pessoa);
+            }
+        }
   
     return maisVelhasAtuais;
-  }
+}
 
-//     // //Pega os valores
-//     // let newNome = nome.value;
-//     // nomes.push(newNome);
-//     // nome.value = "";
-//     // let newSobre = sobreNome.value;
-//     // sobreNomes.push(newSobre);
-//     // sobreNome.value = "";
-//     // let newIdade = idade.value;
-//     // idades.push(newIdade);
-//     // idade.value = "";
-    
-//     // //Elabora os dados completos
-//     // let nomeCompleto = newNome + " " + newSobre + " de " + newIdade + " anos" ;
-//     // //Crea o elemento
-//     // let listNomeCompleto = document.createElement("li");
-//     // listNomeCompleto.textContent = nomeCompleto;
-
-//     // //Adiciona o elemento ao final do formulario
-//     // taskList.appendChild(listNomeCompleto);  
-
- 
-// btnPessoaMaior.addEventListener("click", function exibirMaisVelhos() {
-//     let lista = document.createElement("ul");
-  
-//     for (let pessoaMaisVelha of pessoasMaisVelhas(pessoas)) {
-//       let item = document.createElement("li");
-//       item.textContent = `${pessoaMaisVelha.nome} com ${pessoaMaisVelha.idade} anos`;
-//       lista.appendChild(item);
-//     }
-  
-//     taskList.innerHTML = "";
-//     taskList.appendChild(lista);
-// });
