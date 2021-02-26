@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR"></html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +7,25 @@
     <title>Exercicio 4 de JS</title>
 </head>
 <body>
-    <form action="">
-        <label>
+    <form>
+        <label for="">
             Nome:
-            <input id="newNome" type="text">
+            <input type="text" id="nome">
             Sobrenome:
-            <input id="newSobre" type="text">
+            <input type="text" id="sobreNome">
             Idade:
-            <input id="newIdade" type="text">
+            <input type="text" id="idade">
         </label>
-        <button type="button" onclick="addNewTask()">Adicionar</button>
+        <button>Adicionar</button>
+        
     </form>
+    <button id="exibirMaisVelhos">Pessoa maior</button>
+    <div id="resultado">
+    </div>
 
-    <ul id="taskList">
+    <script src="ex04.js"></script> 
 
-    </ul>
-    <script src="ex04.js"></script>
     
-</body>
+
+  </body>
 </html>
