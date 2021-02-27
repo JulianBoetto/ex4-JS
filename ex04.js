@@ -1,36 +1,58 @@
-let nomes = document.querySelector("#nome");
-let sobreNomes = document.querySelector("#sobreNome");
-let idades = document.querySelector("#idade");
-let form = document.querySelector("form");
-let btnExibirMaisVelhos = document.querySelector("#exibirMaisVelhos");
-let resultado = document.querySelector("#resultado")
+var nomes = document.querySelector("#nome");
+var sobreNomes = document.querySelector("#sobreNome");
+var idades = document.querySelector("#idade");
+var form = document.querySelector("form");
+var btnExibirMaisVelhos = document.querySelector("#exibirMaisVelhos");
+var resultado = document.querySelector("#resultado")
+var listaPessoas = document.querySelector("#pessoasAdi");
+var utimaPessoa = document.querySelector("#utimaPessoa");
 
 
-let pessoas = [];
+
+var pessoas = [];
+
 
 //Adiciona pessoas
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let pessoa = {
+  var pessoa = {
     nome: nomes.value,
     sobreNome: sobreNomes.value,
     idade: Number(idades.value)
   };
 
   pessoas.push(pessoa);
-
+  
   nomes.value = "";
   sobreNomes.value = "";
   idades.value = "";
+    
+//   pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade} anos`;
   
-    //Mostra o nome completo das pessoas
-    pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade}`;
+adiciona();
+
+
+function adiciona() {
+    
+    pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade} anos`;
+    var listaPessoas = document.createElement("ul");
+  
+        for (let pessoa of pessoas) {
+        var itemPessoas = document.createElement("li");
+        itemPessoas.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade} anos`;
+        listaPessoas.appendChild(itemPessoas);
+        }
         
+    pessoasAdi.innerHTML = "";
+    pessoasAdi.appendChild(listaPessoas);
+}
 });
 
 
-//Botao para exibir as pessoas maiores
+
+
+// Botao para exibir as pessoas maiores
 btnExibirMaisVelhos.addEventListener("click", function exibirMaisVelhos() {
     let lista = document.createElement("ul");
   
