@@ -28,8 +28,8 @@ form.addEventListener("submit", function (event) {
   sobreNomes.value = "";
   idades.value = "";
     
-//   pessoasAdi.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade} anos`;
-  
+  utimaPessoa.textContent = `${pessoa.nome} ${pessoa.sobreNome} de ${pessoa.idade} anos`;
+
 adiciona();
 
 
