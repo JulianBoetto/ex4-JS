@@ -5,33 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 4 de JS</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <form>
-        <label for="">
-            Nome:
-            <input type="text" id="nome">
-            Sobrenome:
-            <input type="text" id="sobreNome">
-            Idade:
-            <input type="text" id="idade">
-        </label>
-        <button>Adicionar</button>
-        
-    </form>
-    <button id="exibirMaisVelhos">Pessoa maior</button>
-    <div>
-        <h3>Ultima pessoa adicionada:</h3>
-        <div id="utimaPessoa"></div>
+    <div id="content">
+        <div id="form">
+            <form>
+                <h2 id="cp">Calculador de pessoas</h2>
+                <label for="">
+                    <div class="nome">
+                        <p>Nome:</p>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="snome">
+                        <p>Sobrenome:</p>
+                        <input type="text" id="sobreNome">
+                    </div>
+                    <div class="idade">
+                        <p>Idade:</p>
+                        <input type="text" id="idade">
+                    </div>
+                </label>
+                <button id="adi">Adicionar pessoa</button>
+                
+            </form>
+    
+            <div id="mv">
+                <button id="exibirMaisVelhos">Pessoa maior</button>
+            </div>
+        </div>
+
+        <div id="pessoa1">
+            <h3>Ultima pessoa adicionada:</h3>
+            <div id="utimaPessoa"></div>
+        </div>
+        <div id="pessoa2">
+            <h3>Pessoas adicionadas:</h3>
+            <div id="pessoasAdi"></div>
+        </div>
+        <div id="pessoa3">
+            <h3>Pessoas maiores:</h3>
+            <div id="resultado"></div>
+        </div>
+    
     </div>
-    <div>
-        <h3>Pessoas adicionadas:</h3>
-        <div id="pessoasAdi"></div>
-    </div>
-    <div>
-        <h3>Pessoas maiores:</h3>
-        <div id="resultado"></div>
-    </div>
+
 
     <script src="ex04.js"></script> 
 
